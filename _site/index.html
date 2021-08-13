@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -9,18 +10,33 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     
     <style>
-      /*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */blockquote,body,dd,dl,dt,fieldset,figure,h1,h2,h3,h4,h5,h6,hr,html,iframe,legend,li,ol,p,pre,textarea,ul{margin:0;padding:0}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:400}ul{list-style:none}button,input,select{margin:0}html{box-sizing:border-box}*,::after,::before{box-sizing:inherit}img,video{height:auto;max-width:100%}iframe{border:0}table{border-collapse:collapse;border-spacing:0}td,th{padding:0}:root{font-size:16px;--color-header:#414141;--color-text:white;font-family:Poppins,sans-serif;color:var(--color-text)}.debug{color:red;font-size:2rem}#layout{display:grid;grid-template-rows:auto 1fr auto;min-height:100vh}#header{height:10rem;background-color:var(--color-header);display:flex;align-items:center;justify-content:flex-start;padding:0 4rem}.logo{font-size:2rem;font-weight:700;text-transform:capitalize}#footer{display:flex;align-items:center;justify-content:center;height:3.5rem;background-color:var(--color-header)}
+      /*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */blockquote,body,dd,dl,dt,fieldset,figure,h1,h2,h3,h4,h5,h6,hr,html,iframe,legend,li,ol,p,pre,textarea,ul{margin:0;padding:0}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:400}ul{list-style:none}button,input,select{margin:0}html{box-sizing:border-box}*,::after,::before{box-sizing:inherit}img,video{height:auto;max-width:100%}iframe{border:0}table{border-collapse:collapse;border-spacing:0}td,th{padding:0}:root{font-size:16px;--color-header:#414141;--color-text:white;font-family:Poppins,sans-serif;color:var(--color-text)}.debug{color:red;font-size:2rem}#layout{display:grid;grid-template-rows:auto 1fr auto;min-height:100vh}#header{height:10rem;background-color:var(--color-header);display:flex;align-items:center;justify-content:space-between;padding:0 4rem}.logo{color:var(--color-text);font-size:2rem;font-weight:700;letter-spacing:.195em;text-transform:uppercase;text-decoration:none}.navigation{display:flex;flex-direction:row;justify-content:space-between}.navigation :not(:first-child){margin-left:1rem}.navigation__link{color:var(--color-text);text-decoration:none;text-transform:capitalize;opacity:.6}.navigation__link:hover{opacity:1}.navigation [aria-current]{opacity:.8}#footer{display:flex;align-items:center;justify-content:center;height:3.5rem;background-color:var(--color-header)}
     </style>
   </head>
   <body>
     <div id="layout">
       <header id="header">
-        <div class="logo">MARIJA MILETIC</div>
+        <a href="/" class="logo">Marija Miletić</a>
+        <nav aria-labelledby="my-pagination">
+          <ul class="navigation">
+              <li>
+                <a class="navigation__link" href="/logo" >logo</a>
+              </li>
+              <li>
+                <a class="navigation__link" href="/illustration" >illustration</a>
+              </li>
+              <li>
+                <a class="navigation__link" href="/print" >print</a>
+              </li>
+              <li>
+                <a class="navigation__link" href="/contact" >contact</a>
+              </li>
+          </ul>
+        </nav>
       </header>
 
       <main>
-        <h1 class="debug">Let's go!</h1>
-
+        <h1 class="debug">Home</h1>
       </main>
 
       <footer id="footer">

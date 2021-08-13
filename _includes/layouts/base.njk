@@ -1,3 +1,11 @@
+---
+navigation:
+ - logo
+ - illustration
+ - print
+ - contact
+---
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -18,7 +26,16 @@
   <body>
     <div id="layout">
       <header id="header">
-        <div class="logo">MARIJA MILETIC</div>
+        <a href="/" class="logo">Marija Miletić</a>
+        <nav aria-labelledby="my-pagination">
+          <ul class="navigation">
+            {%- for pageEntry in navigation %}
+              <li>
+                <a class="navigation__link" href="/{{ navigation[ loop.index0 ] }}" {% if page.url.replaceAll("/", "") == navigation[ loop.index0 ] %} aria-current="page" {% endif %}>{{ pageEntry }}</a>
+              </li>
+            {%- endfor %}
+          </ul>
+        </nav>
       </header>
 
       <main>

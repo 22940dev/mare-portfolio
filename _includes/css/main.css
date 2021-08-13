@@ -22,14 +22,42 @@
   background-color: var(--color-header);
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: space-between;
   padding: 0 4rem;
 }
 
 .logo {
+  color: var(--color-text);
   font-size: 2rem;
   font-weight: bold;
+  letter-spacing: 0.195em;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.navigation {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.navigation :not(:first-child) {
+  margin-left: 1rem;
+}
+
+.navigation__link {
+  color: var(--color-text);
+  text-decoration: none;
   text-transform: capitalize;
+  opacity: 0.6;
+}
+
+.navigation__link:hover {
+  opacity: 1;
+}
+
+.navigation [aria-current] {
+  opacity: 0.8;
 }
 
 #footer {
