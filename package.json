@@ -1,0 +1,31 @@
+{
+  "name": "small-static-site-generator",
+  "version": "1.0.0",
+  "description": "Static site generator",
+  "scripts": {
+    "start": "rimraf static/* & eleventy --serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ikovic/vanilla-js-boilerplate.git"
+  },
+  "author": "Ivan Kovic",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ikovic/vanilla-js-boilerplate/issues"
+  },
+  "homepage": "https://github.com/ikovic/vanilla-js-boilerplate#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "@11ty/eleventy": "0.10.0",
+    "eslint": "6.8.0",
+    "eslint-plugin-prettier": "3.1.2",
+    "prettier": "1.19.1",
+    "rimraf": "^3.0.2"
+  },
+  "prettier": {
+    "singleQuote": true,
+    "trailingComma": "es5",
+    "printWidth": 100
+  }
+}
