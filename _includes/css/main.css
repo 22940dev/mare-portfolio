@@ -67,3 +67,13 @@
   height: 3.5rem;
   background-color: var(--color-header);
 }
+
+#content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.container {
+  max-width: 996px;
+}

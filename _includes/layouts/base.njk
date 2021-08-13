@@ -14,10 +14,14 @@ navigation:
     <title>{{ pageTitle }}</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="crossorigin">
+    <link rel="icon" href="{{ '/images/favicon/favicon.png' | url }}" type="image/png">
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     {% set css %}
     {% include "css/reset.css" %}
     {% include "css/main.css" %}
+    {% if stylesheet %}
+      {% include stylesheet %}
+    {% endif%}
     {% endset %}
     <style>
       {{css | cssmin | safe}}
@@ -38,8 +42,10 @@ navigation:
         </nav>
       </header>
 
-      <main>
-        {{ content | safe }}
+      <main id="content">
+        <div class="container">
+          {{ content | safe }}
+        </div>
       </main>
 
       <footer id="footer">

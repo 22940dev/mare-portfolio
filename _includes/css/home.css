@@ -1,0 +1,31 @@
+.hero {
+}
+
+.hero--dark {
+  background-color: #414141;
+  padding: 2rem;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 2rem;
+  padding: 4rem;
+}
+
+.hero-grid h1 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.hero-grid h2 {
+  font-size: 1.25rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 1rem 0;
+}
+
+.hero-grid p {
+  line-height: 1.25rem;
+  letter-spacing: 0.195em;
+}
