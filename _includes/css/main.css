@@ -1,0 +1,41 @@
+:root {
+  font-size: 16px;
+  --color-header: #414141;
+  --color-text: white;
+  font-family: 'Poppins', sans-serif;
+  color: var(--color-text);
+}
+
+.debug {
+  color: red;
+  font-size: 2rem;
+}
+
+#layout {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+}
+
+#header {
+  height: 10rem;
+  background-color: var(--color-header);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 4rem;
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+#footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 3.5rem;
+  background-color: var(--color-header);
+}
