@@ -12,7 +12,7 @@ const path = require('path');
 async function imageShortcode(src, alt, sizes = '100vw') {
   let metadata = await Image(src, {
     widths: [375, 701, 967],
-    formats: ['avif', 'jpeg'],
+    formats: ['avif', 'webp', 'jpeg'],
     outputDir: './images/optimized/',
     urlPath: './images/optimized/',
     filenameFormat: function (id, src, width, format, options) {
