@@ -12,11 +12,10 @@ navigation:
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ pageTitle }}</title>
+    <link rel="icon" href="{{ '/images/favicon/favicon.png' | url }}" type="image/png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="crossorigin">
-    <link rel="icon" href="{{ '/images/favicon/favicon.png' | url }}" type="image/png">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-    {% set css %}
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">    {% set css %}
     {% include "css/reset.css" %}
     {% include "css/main.css" %}
     {% if stylesheet %}
@@ -53,7 +52,7 @@ navigation:
       </main>
 
       <footer id="footer">
-        <a class="mr-m link--clear centered-content" href="http://www.linkedin.com/in/marija-miletić" target="_blank">
+        <a class="mr-l link--clear centered-content" href="http://www.linkedin.com/in/marija-miletić" target="_blank">
           <img src="{{ '/images/linkedin.svg' | url }}">
         </a>
         <a class="link--clear" href="mailto:marijamiletic0@gmail.com" target="_blank">marijamiletic0@gmail.com</a>

@@ -29,7 +29,7 @@
 .logo {
   color: var(--color-text);
   font-size: 2rem;
-  font-weight: bold;
+  font-weight: 700;
   letter-spacing: 0.195em;
   text-transform: uppercase;
   text-decoration: none;
@@ -65,13 +65,17 @@
 }
 
 .container {
-  max-width: 640px;
+  max-width: 960px;
   width: 100%;
 }
 
 /* UTILITY CSS */
-.mr-m {
-  margin-right: 1rem;
+.mr-l {
+  margin-right: 2rem;
+}
+
+.mb-xl {
+  margin-bottom: 4rem;
 }
 
 a.link--clear,
@@ -93,8 +97,32 @@ a.link--clear[aria-current] {
   opacity: 0.9;
 }
 
+.button {
+  height: 4rem;
+  background-color: white;
+  color: var(--color-header);
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1rem 2.5rem;
+}
+
+.button:hover,
+.button:focus {
+  color: black;
+}
+
+.button:active {
+  color: black;
+  filter: brightness(0.9);
+}
+
 .centered-content {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+p {
+  margin: 1rem 0;
 }

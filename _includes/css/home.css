@@ -15,12 +15,12 @@
 
 .hero-grid h1 {
   font-size: 2rem;
-  font-weight: bold;
+  font-weight: 600;
 }
 
 .hero-grid h2 {
   font-size: 1.25rem;
-  font-weight: bold;
+  font-weight: 600;
   text-transform: uppercase;
   margin: 1rem 0;
 }
