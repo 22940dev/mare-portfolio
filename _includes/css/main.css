@@ -92,3 +92,9 @@ a.link--clear:active {
 a.link--clear[aria-current] {
   opacity: 0.9;
 }
+
+.centered-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
