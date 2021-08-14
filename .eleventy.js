@@ -38,8 +38,28 @@ async function imageShortcode(src, alt, sizes = '100vw') {
 }
 
 module.exports = function (eleventyConfig) {
-  eleventyConfig.addPassthroughCopy('css');
+  eleventyConfig.addPassthroughCopy('js');
   eleventyConfig.addPassthroughCopy('images');
+  eleventyConfig.addPassthroughCopy({
+    './node_modules/lightgallery/css/lightgallery-bundle.min.css': 'lib/lightgallery.css',
+  });
+  eleventyConfig.addPassthroughCopy({
+    './node_modules/lightgallery/lightgallery.min.js': 'lib/lightgallery.js',
+  });
+  eleventyConfig.addPassthroughCopy({
+    './node_modules/lightgallery/plugins/zoom/lg-zoom.min.js': 'lib/lightgallery-zoom.js',
+  });
+  eleventyConfig.addPassthroughCopy({
+    './node_modules/lightgallery/plugins/thumbnail/lg-thumbnail.min.js': 'lib/lightgallery-thumbnail.js',
+  });
+
+  eleventyConfig.addPassthroughCopy({
+    './node_modules/justifiedGallery/dist/css/justifiedGallery.min.css': 'lib/justifiedGallery.css',
+  });
+  eleventyConfig.addPassthroughCopy({
+    './node_modules/justifiedGallery/dist/js/jquery.justifiedGallery.min.js':
+      'lib/justifiedGallery.js',
+  });
 
   // add a template shortcode to replace image references with optimized ones
   eleventyConfig.addNunjucksAsyncShortcode('image', imageShortcode);

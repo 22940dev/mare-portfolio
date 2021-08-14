@@ -1,6 +1,6 @@
-# small-static-site-boilerplate
+# mare-portfolio
 
-Putting together some tooling designed to make working on smaller static sites easier. Nothing complex, for now I'm using eleventy to compile nunjacks templates to HTML.
+Static site - graphic designer portfolio. Image processing via eleventy.
 
 ## 11ty
 This section documents the plugins used to improve dev experience.

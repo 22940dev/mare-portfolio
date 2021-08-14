@@ -25,5 +25,9 @@
     "singleQuote": true,
     "trailingComma": "es5",
     "printWidth": 100
+  },
+  "dependencies": {
+    "justifiedGallery": "^3.8.1",
+    "lightgallery": "^2.1.8"
   }
 }

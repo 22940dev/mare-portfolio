@@ -26,6 +26,10 @@ navigation:
     <style>
       {{css | cssmin | safe}}
     </style>
+    {% if gallery %}
+      <link rel="stylesheet" href="{{ '/lib/lightgallery.css' | url }}" type="text/css">
+      <link rel="stylesheet" href="{{ '/lib/justifiedGallery.css' | url }}" type="text/css">
+    {% endif %}
   </head>
   <body>
     <div id="layout">
@@ -52,5 +56,14 @@ navigation:
         marijamiletic0@gmail.com
       </footer>
     </div>
+
+    {% if gallery %}
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+      <script src="{{ '/lib/lightgallery.js' | url }}"></script>
+      <script src="{{ '/lib/lightgallery-zoom.js' | url }}"></script>
+      <script src="{{ '/lib/lightgallery-thumbnail.js' | url }}"></script>
+      <script src="{{ '/lib/justifiedGallery.js' | url }}"></script>
+      <script src="{{ '/js/gallery.js' | url }}"></script>  
+    {% endif %}
   </body>
 </html>
