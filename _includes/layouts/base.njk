@@ -39,7 +39,7 @@ navigation:
           <ul class="navigation">
             {%- for pageEntry in navigation %}
               <li>
-                <a class="navigation__link" href="/{{ navigation[ loop.index0 ] }}" {% if page.url.replaceAll("/", "") == navigation[ loop.index0 ] %} aria-current="page" {% endif %}>{{ pageEntry }}</a>
+                <a class="navigation__link link--clear" href="/{{ navigation[ loop.index0 ] }}" {% if page.url.replaceAll("/", "") == navigation[ loop.index0 ] %} aria-current="page" {% endif %}>{{ pageEntry }}</a>
               </li>
             {%- endfor %}
           </ul>
@@ -53,7 +53,10 @@ navigation:
       </main>
 
       <footer id="footer">
-        marijamiletic0@gmail.com
+        <a class="mr-m link--clear" href="linkedin">
+          <img src="{{ '/images/linkedin.svg' | url }}">
+        </a>
+        <a class="link--clear" href="mailto:marijamiletic0@gmail.com">marijamiletic0@gmail.com</a>
       </footer>
     </div>
 

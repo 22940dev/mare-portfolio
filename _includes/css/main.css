@@ -47,17 +47,7 @@
 
 .navigation__link {
   color: var(--color-text);
-  text-decoration: none;
   text-transform: capitalize;
-  opacity: 0.6;
-}
-
-.navigation__link:hover {
-  opacity: 1;
-}
-
-.navigation [aria-current] {
-  opacity: 0.8;
 }
 
 #footer {
@@ -77,4 +67,28 @@
 .container {
   max-width: 640px;
   width: 100%;
+}
+
+/* UTILITY CSS */
+.mr-m {
+  margin-right: 1rem;
+}
+
+a.link--clear,
+a.link--clear:hover,
+a.link--clear:focus,
+a.link--clear:active {
+  text-decoration: none;
+  color: inherit;
+  opacity: 0.7;
+}
+
+a.link--clear:hover,
+a.link--clear:focus,
+a.link--clear:active {
+  opacity: 1;
+}
+
+a.link--clear[aria-current] {
+  opacity: 0.9;
 }
