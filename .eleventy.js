@@ -9,9 +9,9 @@ const path = require('path');
  * @param {*} sizes
  * @returns a shortcode to be used in templates (eg: {% image "images/pencil.jpeg", "photo of my pencil", "(min-width: 30em) 50vw, 100vw" %})
  */
-async function imageShortcode(src, alt, sizes = '100vw') {
+async function imageShortcode(src, alt, sizes = '100vw', htmlClass = '') {
   let metadata = await Image(src, {
-    widths: [375, 701, 967],
+    widths: [560, 760],
     formats: ['avif', 'webp', 'jpeg'],
     outputDir: './_site/images/optimized/',
     urlPath: './images/optimized/',
@@ -29,6 +29,7 @@ async function imageShortcode(src, alt, sizes = '100vw') {
     sizes,
     loading: 'lazy',
     decoding: 'async',
+    class: htmlClass,
   };
 
   // You bet we throw an error on missing alt in `imageAttributes` (alt="" works okay)
@@ -50,7 +51,8 @@ module.exports = function (eleventyConfig) {
     './node_modules/lightgallery/plugins/zoom/lg-zoom.min.js': 'lib/lightgallery-zoom.js',
   });
   eleventyConfig.addPassthroughCopy({
-    './node_modules/lightgallery/plugins/thumbnail/lg-thumbnail.min.js': 'lib/lightgallery-thumbnail.js',
+    './node_modules/lightgallery/plugins/thumbnail/lg-thumbnail.min.js':
+      'lib/lightgallery-thumbnail.js',
   });
 
   eleventyConfig.addPassthroughCopy({
