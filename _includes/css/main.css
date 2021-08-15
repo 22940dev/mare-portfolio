@@ -6,6 +6,20 @@
   color: var(--color-text);
 }
 
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  :root {
+    font-size: 10px;
+  }
+}
+
+/* Large devices (tablets, 768px and up) */
+@media (min-width: 992px) {
+  :root {
+    font-size: 12px;
+  }
+}
+
 .debug {
   color: red;
   font-size: 2rem;
