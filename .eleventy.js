@@ -3,6 +3,17 @@ const Image = require('@11ty/eleventy-img');
 const path = require('path');
 
 /**
+ * Returns a link styled as a button.
+ * @param {*} text
+ * @param {*} htmlClass
+ * @param {*} href
+ * @returns
+ */
+function buttonShortcode(text, href, htmlClass) {
+  return `<a class="button ${htmlClass}" href="${href}">${text}</a>`;
+}
+
+/**
  * Generates an optimized image for the given src.
  * @param {*} src
  * @param {*} alt
@@ -65,6 +76,8 @@ module.exports = function (eleventyConfig) {
 
   // add a template shortcode to replace image references with optimized ones
   eleventyConfig.addNunjucksAsyncShortcode('image', imageShortcode);
+
+  eleventyConfig.addNunjucksShortcode('button', buttonShortcode);
 
   // inline css
   eleventyConfig.addFilter('cssmin', function (code) {
