@@ -15,12 +15,13 @@ navigation:
     <link rel="icon" href="{{ '/images/favicon/favicon.png' | url }}" type="image/png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="crossorigin">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">    {% set css %}
-    {% include "css/reset.css" %}
-    {% include "css/main.css" %}
-    {% if stylesheet %}
-      {% include stylesheet %}
-    {% endif%}
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    {% set css %}
+      {% include "css/reset.css" %}
+      {% include "css/main.css" %}
+      {% if stylesheet %}
+        {% include stylesheet %}
+      {% endif%}
     {% endset %}
     <style>
       {{css | cssmin | safe}}
