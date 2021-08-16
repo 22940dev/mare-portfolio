@@ -33,3 +33,35 @@
 .hero__image {
   display: block;
 }
+
+@media (max-width: 768px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+    padding: 0;
+    color: var(--color-header);
+  }
+
+  .hero__overlay {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 2rem 15%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .hero-grid .hero.mobile h1 {
+    font-size: 2.75rem;
+  }
+
+  .hero.mobile {
+    position: relative;
+  }
+
+  #bio {
+    width: 100%;
+    padding: 2rem 15%;
+  }
+}

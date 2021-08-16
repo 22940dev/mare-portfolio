@@ -4,10 +4,10 @@ layout: layouts/base.njk
 stylesheet: css/home.css
 ---
 <div class="hero-grid">
-    <article class="hero">
+    <article class="hero desktop">
         {% image "images/pencil.jpeg", "photo of my pencil", "(max-width: 760px) 50vw, 100vw", "hero__image" %}
     </article>
-    <article class="hero hero--dark">
+    <article class="hero hero--dark desktop">
         <h1>
             Graphic Design & Illustration
         </h1>
@@ -19,5 +19,26 @@ stylesheet: css/home.css
             Specializes in a wide range of print and digital graphic design services, including logo design, book design, illustrations, and more.
         </p>
         {% button "See my work", "/contact" %}
+    </article>
+    <article class="hero mobile">
+        {% image "images/pencil.jpeg", "photo of my pencil", "(max-width: 760px) 50vw, 100vw", "hero__image" %}
+        <div class="hero__overlay">
+            <h1 class="hero__h1">
+                Graphic Design & Illustration
+            </h1>
+            {% button "See my work", "/contact", "button--negative mt-m" %}
+        </div>           
+    </article>
+    <article id="bio" class="mobile">
+        <h1>
+            About
+        </h1>
+        <h2>
+            Marija Miletić
+        </h2>
+        <p>
+            Experienced freelance graphic designer with a demonstrated history of working in the graphic design industry. 
+            Specializes in a wide range of print and digital graphic design services, including logo design, book design, illustrations, and more.
+        </p>
     </article>
 </div>

@@ -35,7 +35,10 @@ navigation:
     <div id="layout">
       <header id="header">
         <a href="/" class="logo">Marija Miletić</a>
-        <nav aria-labelledby="my-pagination">
+        <nav class="mobile">
+          {% button "Contact", "/contact", "button--small" %}
+        </nav>
+        <nav class="desktop" aria-labelledby="my-pagination">
           <ul class="navigation">
             {%- for pageEntry in navigation %}
               <li>
