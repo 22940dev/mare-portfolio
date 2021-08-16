@@ -1,5 +1,28 @@
 ---
 pageTitle: Contact
 layout: layouts/base.njk
+stylesheet: css/contact.css
+mobileNavHref: /logo
+mobileNavText: See my work
 ---
-<h1 class="debug">Contact</h1>
+<div class="hero-grid">
+    <article class="hero desktop">
+        {% image "images/pencil-horizontal.jpeg", "photo of my pencil", "(max-width: 760px) 50vw, 100vw", "hero__image" %}
+    </article>
+    <article class="hero--dark">
+        <h1>
+            Contact me
+        </h1>
+        <h2>
+            Marija Miletić
+        </h2>
+        <p>
+            Split, Croatia
+        </p>        
+        <ul>
+            <li>WRITE AT <span class="bold">marijamiletic0@gmail.com</span></li>
+            <li>CALL ON <span class="bold">+385955105379</span></li>
+            <li>FIND ME ON <span class="bold"><a class="link--clear" target="_blank" rel="noopener" href="https://www.linkedin.com/in/marija-miletić">linkedin.com/in/marija-miletić</a></span></li>
+        </ul>       
+    </article>
+</div>

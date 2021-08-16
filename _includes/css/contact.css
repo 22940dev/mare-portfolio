@@ -1,0 +1,49 @@
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 2rem;
+  padding: 4rem;
+}
+
+.hero--dark {
+  background-color: #414141;
+  padding: 2rem;
+}
+
+.hero__image {
+  display: block;
+}
+
+.hero-grid h1 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.hero-grid h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin: 1rem 0;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+@media (max-width: 768px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+    padding: 0;
+    color: var(--color-header);
+  }
+
+  .hero--dark {
+    padding: 2rem 15%;
+    color: var(--color-header);
+    background-color: transparent;
+  }
+
+  .hero-grid h1 {
+    font-size: 2.75rem;
+  }
+}

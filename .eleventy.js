@@ -25,7 +25,7 @@ async function imageShortcode(src, alt, sizes = '100vw', htmlClass = '') {
     widths: [760, 1120],
     formats: ['avif', 'webp', 'jpeg'],
     outputDir: './_site/images/optimized/',
-    urlPath: './images/optimized/',
+    urlPath: '/images/optimized/',
     filenameFormat: function (id, src, width, format, options) {
       const extension = path.extname(src);
       const name = path.basename(src, extension);

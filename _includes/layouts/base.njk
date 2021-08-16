@@ -1,4 +1,6 @@
 ---
+mobileNavHref: /contact
+mobileNavText: Contact
 navigation:
  - logo
  - illustration
@@ -36,7 +38,7 @@ navigation:
       <header id="header">
         <a href="/" class="logo">Marija Miletić</a>
         <nav class="mobile">
-          {% button "Contact", "/contact", "button--small" %}
+          {% button mobileNavText | safe, mobileNavHref | url, "button--small" %}
         </nav>
         <nav class="desktop" aria-labelledby="my-pagination">
           <ul class="navigation">
