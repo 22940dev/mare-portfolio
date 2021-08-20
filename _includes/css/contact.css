@@ -64,4 +64,13 @@
     height: 100%;
     width: 100%;
   }
+
+  .details li {
+    margin-bottom: 0.75rem;
+  }
+
+  .details li span {
+    display: block;
+    letter-spacing: 0.195em;
+  }
 }

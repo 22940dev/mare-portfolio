@@ -85,6 +85,10 @@ body,
   .logo {
     font-size: 1.25rem;
   }
+
+  #footer.desktop {
+    display: none;
+  }
 }
 
 .navigation {
