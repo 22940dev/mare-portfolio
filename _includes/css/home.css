@@ -1,6 +1,3 @@
-.hero {
-}
-
 .hero--dark {
   background-color: #414141;
   padding: 2rem;
@@ -22,7 +19,6 @@
   font-size: 1.25rem;
   font-weight: 600;
   text-transform: uppercase;
-  margin: 1rem 0;
 }
 
 .hero-grid p {

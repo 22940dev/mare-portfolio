@@ -126,6 +126,10 @@ body,
   margin-right: 2rem;
 }
 
+.mb-m {
+  margin-bottom: 1rem;
+}
+
 .mb-xl {
   margin-bottom: 4rem;
 }
@@ -194,5 +198,13 @@ a.link--clear[aria-current] {
 }
 
 p {
-  margin: 1rem 0;
+  margin: 0 0 0.5rem 0;
+}
+
+h1 {
+  margin: 0 0 1rem 0;
+}
+
+h2 {
+  margin: 0 0 0.75rem 0;
 }
