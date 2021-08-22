@@ -1,0 +1,49 @@
+---
+pageTitle: Portfolio
+layout: layouts/base.njk
+gallery: true
+stylesheet: css/portfolio.css
+logoImages:
+ - smartstart
+ - antico
+ - midnk
+ - nest
+editorialImages:
+ - magazin
+ - brochure
+ - fantastikon
+ - cover
+ - nova
+ - zen
+illustrationImages:
+ - fico
+ - morph
+ - books
+ - fall
+---
+<section id="portfolio">
+    <h2>Editorial Design</h2>    
+    <div id="editorial">
+        {% for image in editorialImages %}
+            <a href="/images/portfolio/{{ image }}.jpg" data-lg-size="1600-2400">
+                <img alt="{{ image }}" src="/images/portfolio/{{ image }}.jpg" />
+            </a>
+        {% endfor %}
+    </div>
+    <h2>Logo Design & Branding</h2>
+    <div id="logo">
+        {% for image in logoImages %}
+            <a href="/images/portfolio/{{ image }}.jpg" data-lg-size="1600-2400">
+                <img alt="{{ image }}" src="/images/portfolio/{{ image }}.jpg" />
+            </a>
+        {% endfor %}
+    </div>
+    <h2>Illustration</h2>
+    <div id="illustration">
+        {% for image in illustrationImages %}
+            <a href="/images/portfolio/{{ image }}.jpg" data-lg-size="1600-2400">
+                <img alt="{{ image }}" src="/images/portfolio/{{ image }}.jpg" />
+            </a>
+        {% endfor %}
+    </div>
+</section>

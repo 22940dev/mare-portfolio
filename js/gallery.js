@@ -1,12 +1,5 @@
-document.addEventListener('DOMContentLoaded', function (event) {
-  // Your code to run since DOM is loaded and ready
-  console.log('TEST', { gallery: document.getElementById('lightgallery') });
-
-  /* lightGallery(document.getElementById('lightgallery'), {
-    // plugins: [lgZoom, lgThumbnail],
-    speed: 500,
-  }); */
-  $('#lightgallery')
+function initGallery(gallery) {
+  $(gallery)
     .justifiedGallery({ rowHeight: 160, lastRow: 'justify', margins: 4 })
     .on('jg.complete', function () {
       window.lightGallery(document.getElementById('lightgallery'), {
@@ -22,4 +15,8 @@ document.addEventListener('DOMContentLoaded', function (event) {
         },
       });
     });
+}
+
+document.addEventListener('DOMContentLoaded', function (event) {
+  ['#editorial', '#logo', '#illustration'].forEach(initGallery);
 });
