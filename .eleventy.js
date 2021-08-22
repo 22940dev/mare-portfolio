@@ -101,6 +101,18 @@ module.exports = function (eleventyConfig) {
     './node_modules/lightgallery/plugins/thumbnail/lg-thumbnail.min.js':
       'lib/lightgallery-thumbnail.js',
   });
+  eleventyConfig.addPassthroughCopy({
+    './node_modules/lightgallery/images/loading.gif':
+      'images/loading.gif',
+  });
+  eleventyConfig.addPassthroughCopy({
+    './node_modules/lightgallery/fonts/lg.ttf':
+      'fonts/lg.ttf',
+  });
+  eleventyConfig.addPassthroughCopy({
+    './node_modules/lightgallery/fonts/lg.woff':
+      'fonts/lg.woff',
+  });
 
   eleventyConfig.addPassthroughCopy({
     './node_modules/justifiedGallery/dist/css/justifiedGallery.min.css': 'lib/justifiedGallery.css',
