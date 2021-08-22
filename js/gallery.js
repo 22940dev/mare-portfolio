@@ -1,11 +1,11 @@
 function initGallery(gallery) {
   $(gallery)
-    .justifiedGallery({ rowHeight: 160, lastRow: 'justify', margins: 4 })
+    .justifiedGallery({ rowHeight: 160, lastRow: 'justify', margins: 8, border: 0 })
     .on('jg.complete', function () {
       window.lightGallery(document.getElementById('lightgallery'), {
         autoplayFirstVideo: false,
         pager: false,
-        galleryId: 'nature',
+        galleryId: gallery,
         plugins: [lgZoom, lgThumbnail],
         mobileSettings: {
           controls: false,
