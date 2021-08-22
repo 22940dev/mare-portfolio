@@ -20,6 +20,42 @@ function buttonShortcode(text, href, htmlClass) {
  * @param {*} sizes
  * @returns a shortcode to be used in templates (eg: {% image "images/pencil.jpeg", "photo of my pencil", "(min-width: 30em) 50vw, 100vw" %})
  */
+ async function thumbnailShortcode(src, alt, sizes = '100vw', htmlClass = '') {
+  let metadata = await Image(src, {
+    widths: [760],
+    formats: ['avif', 'webp', 'jpeg'],
+    outputDir: './_site/images/optimized/',
+    urlPath: '/images/optimized/',
+    filenameFormat: function (id, src, width, format, options) {
+      const extension = path.extname(src);
+      const name = path.basename(src, extension);
+
+      // id is hash based, this gives us readable file names
+      return `thumb-${name}-${width}w.${format}`;
+    },
+  });
+
+  let imageAttributes = {
+    alt,
+    sizes,
+    loading: 'lazy',
+    decoding: 'async',
+    class: htmlClass,
+  };
+
+  // You bet we throw an error on missing alt in `imageAttributes` (alt="" works okay)
+  return Image.generateHTML(metadata, imageAttributes, {
+    whitespaceMode: 'inline',
+  });
+}
+
+/**
+ * Generates an optimized image for the given src.
+ * @param {*} src
+ * @param {*} alt
+ * @param {*} sizes
+ * @returns a shortcode to be used in templates (eg: {% image "images/pencil.jpeg", "photo of my pencil", "(min-width: 30em) 50vw, 100vw" %})
+ */
 async function imageShortcode(src, alt, sizes = '100vw', htmlClass = '') {
   let metadata = await Image(src, {
     widths: [760, 1120],
@@ -76,6 +112,7 @@ module.exports = function (eleventyConfig) {
 
   // add a template shortcode to replace image references with optimized ones
   eleventyConfig.addNunjucksAsyncShortcode('image', imageShortcode);
+  eleventyConfig.addNunjucksAsyncShortcode('thumb', thumbnailShortcode);
 
   eleventyConfig.addNunjucksShortcode('button', buttonShortcode);
 

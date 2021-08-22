@@ -1,8 +1,8 @@
 function initGallery(gallery) {
-  $(gallery)
-    .justifiedGallery({ rowHeight: 160, lastRow: 'justify', margins: 8, border: 0 })
+  $(`#${gallery}`)
+    .justifiedGallery({ rowHeight: 320, lastRow: 'left', margins: 8, border: 0 })
     .on('jg.complete', function () {
-      window.lightGallery(document.getElementById('lightgallery'), {
+      window.lightGallery(document.getElementById(gallery), {
         autoplayFirstVideo: false,
         pager: false,
         galleryId: gallery,
@@ -18,5 +18,5 @@ function initGallery(gallery) {
 }
 
 document.addEventListener('DOMContentLoaded', function (event) {
-  ['#editorial', '#logo', '#illustration'].forEach(initGallery);
+  ['editorial', 'logo', 'illustration'].forEach(initGallery);
 });
