@@ -14,13 +14,46 @@ function buttonShortcode(text, href, htmlClass) {
 }
 
 /**
+ * WIP Generates markup required for lightGallery to use picture elements with responsive images.
+ * @param {*} mainSrc 
+ * @param {*} alt 
+ * @returns 
+ */
+async function galleryItemShortcode(mainSrc, alt) {
+  const thumbnail = await thumbnailShortcode(mainSrc, alt, null, 'gallery__image');
+  const stats = await Image(mainSrc, {
+    widths: [760, 1120],
+    formats: ['webp', 'jpeg'],
+    outputDir: './_site/images/optimized/',
+    urlPath: '/images/optimized/',
+    filenameFormat: function (id, src, width, format, options) {
+      const extension = path.extname(src);
+      const name = path.basename(src, extension);
+
+      // id is hash based, this gives us readable file names
+      return `${name}-${width}w.${format}`;
+    },
+  });
+
+  /* data-src="img/image-x-small.jpg"
+    data-sources='[{"srcset": "img/image-medium.jpg", "media":"(min-width:620px)"}, {"srcset": "img/image-small.jpg", "media":"(min-width:480px)"}]'
+     */
+
+  /* data-sources='[{"srcset": "/img/img-1.webp", "type":"image/webp"}]' */
+
+  const srcSet = JSON.stringify(stats.webp.map((stat) => ({ srcset: stat.srcset, type: 'image/webp' })));
+
+  return `<a data-src="${stats.jpeg[0].url}" data-sources='${srcSet}'>${thumbnail}</a>`;
+}
+
+/**
  * Generates an optimized image for the given src.
  * @param {*} src
  * @param {*} alt
  * @param {*} sizes
  * @returns a shortcode to be used in templates (eg: {% image "images/pencil.jpeg", "photo of my pencil", "(min-width: 30em) 50vw, 100vw" %})
  */
- async function thumbnailShortcode(src, alt, sizes = '100vw', htmlClass = '') {
+async function thumbnailShortcode(src, alt, sizes = '100vw', htmlClass = '') {
   let metadata = await Image(src, {
     widths: [760],
     formats: ['avif', 'webp', 'jpeg'],
@@ -97,16 +130,13 @@ module.exports = function (eleventyConfig) {
     './node_modules/lightgallery/lightgallery.min.js': 'lib/lightgallery.js',
   });
   eleventyConfig.addPassthroughCopy({
-    './node_modules/lightgallery/images/loading.gif':
-      'images/loading.gif',
+    './node_modules/lightgallery/images/loading.gif': 'images/loading.gif',
   });
   eleventyConfig.addPassthroughCopy({
-    './node_modules/lightgallery/fonts/lg.ttf':
-      'fonts/lg.ttf',
+    './node_modules/lightgallery/fonts/lg.ttf': 'fonts/lg.ttf',
   });
   eleventyConfig.addPassthroughCopy({
-    './node_modules/lightgallery/fonts/lg.woff':
-      'fonts/lg.woff',
+    './node_modules/lightgallery/fonts/lg.woff': 'fonts/lg.woff',
   });
 
   /* gallery - masonry */
@@ -121,6 +151,7 @@ module.exports = function (eleventyConfig) {
   // add a template shortcode to replace image references with optimized ones
   eleventyConfig.addNunjucksAsyncShortcode('image', imageShortcode);
   eleventyConfig.addNunjucksAsyncShortcode('thumb', thumbnailShortcode);
+  eleventyConfig.addNunjucksAsyncShortcode('gallery', galleryItemShortcode);
 
   eleventyConfig.addNunjucksShortcode('button', buttonShortcode);
 

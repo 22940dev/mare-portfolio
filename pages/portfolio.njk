@@ -25,25 +25,19 @@ illustrationImages:
     <h2>Editorial Design</h2>    
     <div id="editorial">
         {% for image in editorialImages %}
-            <a href="/images/portfolio/{{ image }}.jpg" data-lg-size="1600-2400">                
-                {% thumb "images/portfolio/" + image + ".jpg", image, "100vw", "gallery__image" %}
-            </a>
+            {% gallery "images/portfolio/" + image + ".jpg", image %}            
         {% endfor %}
     </div>
     <h2>Logo Design & Branding</h2>
     <div id="logo">
         {% for image in logoImages %}
-            <a href="/images/portfolio/{{ image }}.jpg" data-lg-size="1600-2400">                
-                {% thumb "images/portfolio/" + image + ".jpg", image, "100vw", "gallery__image" %}
-            </a>
+            {% gallery "images/portfolio/" + image + ".jpg", image %}
         {% endfor %}
     </div>
     <h2>Illustration</h2>
     <div id="illustration">
         {% for image in illustrationImages %}
-            <a href="/images/portfolio/{{ image }}.jpg" data-lg-size="1600-2400">                
-                {% thumb "images/portfolio/" + image + ".jpg", image, "100vw", "gallery__image" %}
-            </a>
+            {% gallery "images/portfolio/" + image + ".jpg", image %}
         {% endfor %}
     </div>
 </section>
