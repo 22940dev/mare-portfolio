@@ -6,7 +6,6 @@ function initGallery(gallery) {
         autoplayFirstVideo: false,
         pager: false,
         galleryId: gallery,
-        plugins: [lgZoom, lgThumbnail],
         mobileSettings: {
           controls: false,
           showCloseIcon: false,
