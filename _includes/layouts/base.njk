@@ -30,6 +30,9 @@ navigation:
       <link rel="stylesheet" href="{{ '/lib/lightgallery.css' | url }}" type="text/css">
       <link rel="stylesheet" href="{{ '/lib/justifiedGallery.css' | url }}" type="text/css">
     {% endif %}
+    {% if prefetch %}
+      <link rel="prefetch" href="{{ prefetch | url }}">
+    {% endif %}
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-TV4ZXX2LTF"></script>
     <script>
