@@ -15,9 +15,9 @@ function buttonShortcode(text, href, htmlClass) {
 
 /**
  * WIP Generates markup required for lightGallery to use picture elements with responsive images.
- * @param {*} mainSrc 
- * @param {*} alt 
- * @returns 
+ * @param {*} mainSrc
+ * @param {*} alt
+ * @returns
  */
 async function galleryItemShortcode(mainSrc, alt) {
   const thumbnail = await thumbnailShortcode(mainSrc, alt, null, 'gallery__image');
@@ -35,13 +35,13 @@ async function galleryItemShortcode(mainSrc, alt) {
     },
   });
 
-  /* data-src="img/image-x-small.jpg"
-    data-sources='[{"srcset": "img/image-medium.jpg", "media":"(min-width:620px)"}, {"srcset": "img/image-small.jpg", "media":"(min-width:480px)"}]'
-     */
+  const srcSetWebp = stats.webp.map(({srcset}) => srcset).join(', ');
+  const dataSourcesWebp = {srcset: srcSetWebp, type: 'image/webp' };
 
-  /* data-sources='[{"srcset": "/img/img-1.webp", "type":"image/webp"}]' */
-
-  const srcSet = JSON.stringify(stats.webp.map((stat) => ({ srcset: stat.srcset, type: 'image/webp' })));
+  const srcSetJpg = stats.jpeg.map(({srcset}) => srcset).join(', ');
+  const dataSourcesJpeg = {srcset: srcSetJpg, type: 'image/jpeg' };
+  
+  const srcSet = JSON.stringify([dataSourcesWebp, dataSourcesJpeg]);
 
   return `<a data-src="${stats.jpeg[0].url}" data-sources='${srcSet}'>${thumbnail}</a>`;
 }

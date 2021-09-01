@@ -14,3 +14,7 @@
     padding: 1rem 2rem;
   }
 }
+
+.gallery__image:hover {
+  cursor: pointer;
+}
