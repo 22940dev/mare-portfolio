@@ -85,18 +85,24 @@ body,
   text-decoration: none;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 991px) {
+  .logo {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 767px) {
   #header {
     height: 6rem;
     padding: 0 2rem;
   }
 
-  .logo {
-    font-size: 1.25rem;
-  }
-
   #footer.desktop {
     display: none;
+  }
+
+  .logo {
+    font-size: 1.125rem;
   }
 }
 
