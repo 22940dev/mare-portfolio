@@ -42,14 +42,13 @@
   }
 
   .hero__overlay {
-    position: absolute;
-    bottom: 0;
     width: 100%;
     padding: 2rem 15%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+    order: 1;
   }
 
   .hero-grid .hero.mobile h1 {
@@ -61,11 +60,37 @@
   }
 
   .hero.mobile {
-    position: relative;
+    background-color: #e7e7e7;
+  }
+
+  .image__wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    order: 2;
+  }
+
+  .hero__image {
+    height: auto;
+    width: 10rem;
   }
 
   #bio {
     width: 100%;
     padding: 2rem 15%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .hero.mobile {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0 15%;
+  }
+
+  .hero__overlay {
+    padding: 2rem 0;
   }
 }
