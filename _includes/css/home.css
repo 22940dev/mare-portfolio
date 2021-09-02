@@ -1,6 +1,6 @@
 .hero--dark {
   background-color: #414141;
-  padding: 2rem;
+  padding: 3rem 3rem 0 3rem;
 }
 
 .hero-grid {
@@ -11,7 +11,7 @@
 }
 
 .hero-grid h1 {
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: 600;
 }
 
@@ -19,11 +19,14 @@
   font-size: 1.25rem;
   font-weight: 600;
   text-transform: uppercase;
+  line-height: 36px;
+  letter-spacing: 0.195em;
 }
 
 .hero-grid p {
   line-height: 1.25rem;
   letter-spacing: 0.195em;
+  font-size: 0.85rem;
 }
 
 .hero__image {
@@ -50,6 +53,10 @@
 
   .hero-grid .hero.mobile h1 {
     font-size: 2.75rem;
+  }
+
+  .hero-grid p {
+    font-size: 1rem;
   }
 
   .hero.mobile {

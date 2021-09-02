@@ -1,5 +1,5 @@
 :root {
-  font-size: 10px;
+  font-size: 12px;
   --color-header: #414141;
   --color-text: white;
   font-family: 'Poppins', sans-serif;
@@ -17,7 +17,7 @@
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
   :root {
-    font-size: 10px;
+    font-size: 12px;
   }
 
   .mobile {
@@ -32,7 +32,7 @@
 /* Large devices (tablets, 768px and up) */
 @media (min-width: 992px) {
   :root {
-    font-size: 12px;
+    font-size: 14px;
   }
 }
 
@@ -134,8 +134,8 @@ body,
   margin-bottom: 1rem;
 }
 
-.mb-xl {
-  margin-bottom: 4rem;
+.mb-l {
+  margin-bottom: 3rem;
 }
 
 .mt-m {
@@ -167,7 +167,7 @@ a.link--clear[aria-current] {
   font-weight: 700;
   text-transform: uppercase;
   text-decoration: none;
-  padding: 1rem 2.5rem;
+  padding: 0.75rem 2rem;
 }
 
 .button:hover,
