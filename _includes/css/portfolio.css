@@ -15,6 +15,12 @@
   }
 }
 
+@media (max-width: 767px) {
+  #portfolio h2 {
+    font-size: 1.3125rem;
+  }
+}
+
 .gallery__image:hover {
   cursor: pointer;
 }
