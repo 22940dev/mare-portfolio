@@ -17,6 +17,4 @@ function initGallery(gallery) {
     });
 }
 
-document.addEventListener('DOMContentLoaded', function (event) {
-  ['editorial', 'logo', 'illustration'].forEach(initGallery);
-});
+$(() => ['editorial', 'logo', 'illustration'].forEach(initGallery));
