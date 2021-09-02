@@ -28,6 +28,7 @@
   },
   "dependencies": {
     "justifiedGallery": "^3.8.1",
-    "lightgallery": "^2.1.8"
+    "lightgallery": "^2.1.8",
+    "terser": "^5.7.2"
   }
 }

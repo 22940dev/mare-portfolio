@@ -51,11 +51,11 @@ navigation:
         <nav class="mobile">
           {% button mobileNavText | safe, mobileNavHref | url, "button--small" %}
         </nav>
-        <nav class="desktop" aria-labelledby="my-pagination">
-          <ul class="navigation">
+        <nav class="desktop" aria-labelledby="navigation-list">
+          <ul id="navigation-list" class="navigation">
             {%- for pageEntry in navigation %}
               <li>
-                <a class="navigation__link link--clear" href="/{{ navigation[ loop.index0 ] }}" {% if page.url.replaceAll("/", "") == navigation[ loop.index0 ] %} aria-current="page" {% endif %}>{{ pageEntry }}</a>
+                <a role="link" class="navigation__link link--clear" href="/{{ navigation[ loop.index0 ] }}" {% if page.url.replaceAll("/", "") == navigation[ loop.index0 ] %} aria-current="page" {% endif %}>{{ pageEntry }}</a>
               </li>
             {%- endfor %}
           </ul>
@@ -80,7 +80,13 @@ navigation:
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
       <script src="{{ '/lib/lightgallery.js' | url }}"></script>      
       <script src="{{ '/lib/justifiedGallery.js' | url }}"></script>
-      <script src="{{ '/js/gallery.js' | url }}"></script>  
+      {% set js %}
+        {% include "js/gallery.js" %}
+      {% endset %}
+      <script>
+        {{ js | jsmin | safe }}
+      </script>
+
     {% endif %}
   </body>
 </html>
