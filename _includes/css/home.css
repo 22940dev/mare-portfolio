@@ -13,13 +13,14 @@
 .hero-grid h1 {
   font-size: 2.5rem;
   font-weight: 600;
+  line-height: 3.25rem;
 }
 
 .hero-grid h2 {
   font-size: 1.25rem;
   font-weight: 600;
   text-transform: uppercase;
-  line-height: 36px;
+  line-height: 2rem;
   letter-spacing: 0.195em;
 }
 
@@ -33,7 +34,7 @@
   display: block;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 991px) {
   .hero-grid {
     grid-template-columns: 1fr;
     padding: 0;

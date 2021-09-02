@@ -9,7 +9,7 @@ const path = require('path');
  * @param {*} href
  * @returns
  */
-function buttonShortcode(text, href, htmlClass) {
+function buttonShortcode(text, href, htmlClass = '') {
   return `<a class="button ${htmlClass}" href="${href}">${text}</a>`;
 }
 
@@ -35,12 +35,12 @@ async function galleryItemShortcode(mainSrc, alt) {
     },
   });
 
-  const srcSetWebp = stats.webp.map(({srcset}) => srcset).join(', ');
-  const dataSourcesWebp = {srcset: srcSetWebp, type: 'image/webp' };
+  const srcSetWebp = stats.webp.map(({ srcset }) => srcset).join(', ');
+  const dataSourcesWebp = { srcset: srcSetWebp, type: 'image/webp' };
 
-  const srcSetJpg = stats.jpeg.map(({srcset}) => srcset).join(', ');
-  const dataSourcesJpeg = {srcset: srcSetJpg, type: 'image/jpeg' };
-  
+  const srcSetJpg = stats.jpeg.map(({ srcset }) => srcset).join(', ');
+  const dataSourcesJpeg = { srcset: srcSetJpg, type: 'image/jpeg' };
+
   const srcSet = JSON.stringify([dataSourcesWebp, dataSourcesJpeg]);
 
   return `<a data-src="${stats.jpeg[0].url}" data-sources='${srcSet}'>${thumbnail}</a>`;
