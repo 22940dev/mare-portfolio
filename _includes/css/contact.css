@@ -7,7 +7,7 @@
 
 .hero--dark {
   background-color: #414141;
-  padding: 2rem;
+  padding: 3rem 3rem 0 3rem;
 }
 
 .hero__image {
@@ -21,7 +21,7 @@
 }
 
 .hero-grid h2 {
-  font-size: 1.25rem;
+  font-size: 1.125rem;
   font-weight: 600;
   text-transform: uppercase;
   line-height: 2rem;
@@ -36,6 +36,23 @@
   height: 10rem;
   width: 10rem;
   display: block;
+}
+
+h2,
+p,
+ul {
+  letter-spacing: 0.195em;
+}
+
+.desktop p,
+.details {
+  font-size: 0.85rem;
+}
+
+@media (max-width: 991px) {
+  .hero-grid h1 {
+    font-size: 2rem;
+  }
 }
 
 @media (max-width: 767px) {
