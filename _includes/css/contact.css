@@ -10,10 +10,6 @@
   padding: 3rem 3rem 0 3rem;
 }
 
-.hero__image {
-  display: block;
-}
-
 .hero-grid h1 {
   font-size: 2.5rem;
   font-weight: 600;
@@ -35,7 +31,6 @@
 .selfie__image {
   height: 10rem;
   width: 10rem;
-  display: block;
 }
 
 .hero--dark h2,

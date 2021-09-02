@@ -30,10 +30,6 @@
   font-size: 0.85rem;
 }
 
-.hero__image {
-  display: block;
-}
-
 @media (max-width: 991px) {
   .hero-grid {
     grid-template-columns: 1fr;
