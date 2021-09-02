@@ -53,6 +53,10 @@ ul {
   .hero-grid h1 {
     font-size: 2rem;
   }
+
+  .hero--dark {
+    padding: 2rem 3rem 0 3rem;
+  }
 }
 
 @media (max-width: 767px) {
