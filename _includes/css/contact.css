@@ -67,26 +67,17 @@
   }
 
   .hero--dark {
-    display: grid;
-    grid-auto-rows: 1fr 1.75fr 1fr;
     padding: 2rem 15%;
     color: var(--color-header);
-    background: linear-gradient(to bottom, #e5e5e5 0%, #e5e5e5 50%, white 51%, white 100%);
+    background: linear-gradient(to bottom, #e5e5e5 0%, #e5e5e5 40%, white 41%, white 100%);
   }
 
   .hero-grid h1 {
     font-size: 2.75rem;
   }
 
-  .selfie {
-    display: flex;
-    align-items: center;
-  }
-
-  .selfie__image {
-    height: 75%;
-    width: 75%;
-    margin-bottom: 0;
+  .hero-grid h2 {
+    line-height: 1rem;
   }
 
   .details li {
@@ -95,6 +86,16 @@
 
   .details li span {
     display: block;
-    letter-spacing: 0.195em;
+  }
+
+  .selfie {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+
+  .selfie__image {
+    height: 75%;
+    width: 75%;
   }
 }
