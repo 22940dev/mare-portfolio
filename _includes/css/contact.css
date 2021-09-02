@@ -38,9 +38,9 @@
   display: block;
 }
 
-h2,
-p,
-ul {
+.hero--dark h2,
+.hero--dark p,
+.hero--dark ul {
   letter-spacing: 0.195em;
 }
 
