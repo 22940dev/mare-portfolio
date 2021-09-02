@@ -129,6 +129,12 @@ body,
   background-color: var(--color-header);
 }
 
+.footer__image {
+  display: block;
+  height: auto;
+  width: 1.5rem;
+}
+
 #content {
   display: flex;
   flex-direction: row;
